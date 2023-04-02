@@ -1,0 +1,70 @@
+#!name=酷我音乐、酷我音乐纯净版[ SVIP+净化 ]
+#!desc=史上最全酷我音乐净化加VIP音乐畅听，已兼容酷我原版与酷我畅听版
+#!homepage=https://github.com/ddgksf2013
+#!author=@ddgksf2013
+
+[Rule]
+# > 解决酷我发热问题，在本地添加下面的分流
+DOMAIN,kuwo.cn,DIRECT
+
+[Script]
+
+# > 酷我音乐_搜索框处理
+kuwomusic_30 = type=http-response, pattern=https?:\/\/searchrecterm\.kuwo\.cn\/recterm\.s, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_去除首页轮播广告和tips
+kuwomusic_32 = type=http-response, pattern=https?:\/\/mgxhtj\.kuwo\.cn\/mgxh\.s, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_去除会员页广告
+kuwomusic_34 = type=http-response, pattern=https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/page\/cells, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_去除会员页顶部广告tab
+kuwomusic_36 = type=http-response, pattern=https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/setting, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_数字专辑
+kuwomusic_40 = type=http-response, pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_听书权限接口1
+kuwomusic_42 = type=http-response, pattern=^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/a\.p, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_听书权限接口2
+kuwomusic_44 = type=http-response, pattern=^https?:\/\/.*\.kuwo\.cn\/v2\/api\/pay\/vip\/extraVipStatus, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_新版vip接口1
+kuwomusic_46 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip\?op=ui, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_新版vip接口2
+kuwomusic_48 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/userbase\/vip\?op=get, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_旧版vip接口
+kuwomusic_50 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip($|\?op=ui), requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_皮肤解锁
+kuwomusic_52 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/theme, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+# > 酷我音乐_无损下载[限纯净版]
+kuwomusic_54 = type=http-request, pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?ui, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, timeout=60, script-update-interval=0
+
+[Map Local]
+
+# > 酷我音乐_通用广告请求
+https?:\/\/vip1\.kuwo\.cn\/vip\/activity\/kwMemberDay data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# > 酷我音乐_屏蔽热词
+https?:\/\/hotword\.kuwo\.cn\/hotword\.s data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# > 酷我音乐_通用广告请求
+https?:\/\/vip1\.kuwo\.cn\/vip_adv\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# > 酷我音乐_通用广告请求
+https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/app\/pasterAdvert data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# > 酷我音乐_应用内弹窗及右下角
+^https?:\/\/mobilead\.kuwo\.cn\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# > 酷我音乐_开屏广告
+https?:\/\/rich\.kuwo\.cn\/AdService data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+[MITM]
+
+hostname = %APPEND% *.kuwo.cn,*.lrts.me
