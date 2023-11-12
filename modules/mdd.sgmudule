@@ -1,0 +1,25 @@
+#!name=埋堆堆
+#!desc=埋堆堆开屏广告
+
+[URL Rewrite]
+
+^https?:\/\/tower\.ubixioe\.com\/mob\/mediation - reject
+^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com - reject
+
+[Map Local]
+
+^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https?:\/\/t-dsp\.pinduoduo\.com data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+^http?:\/\/sfo\.mddcloud\.com\.cn\/api\/v2\/sfo\/popup_displays? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https?:\/\/toblog\.ctobsnssdk\.com data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+^https?:\/\/conf-darwin\.xycdn\.com data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+[MITM]
+
+hostname = %APPEND% sfo.mddcloud.com.cn,mob.mddcloud.com.cn,toblog.ctobsnssdk.com,t-dsp.pinduoduo.com,mobads-pre-config.cdn.bcebos.com,sdk1xyajs.data.kuiniuca.com,conf-darwin.xycdn.com,*.ubixioe.com 
