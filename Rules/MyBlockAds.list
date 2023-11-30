@@ -1,4 +1,4 @@
-# 2023-11-22 14:40
+# 2024-02-08 08:45
 # 搬运自 RuCu6
 
 # ======= A ======= #
@@ -38,13 +38,9 @@ DOMAIN-SUFFIX,pos.baidu.com
 # 百度地图
 DOMAIN,afd.baidu.com
 DOMAIN,afdconf.baidu.com
-DOMAIN,httpdns.baidubce.com
 DOMAIN,lc.map.baidu.com
 # 百度贴吧
 IP-CIDR,180.76.76.200/32
-# 哔哩哔哩
-DOMAIN,mall.bilibili.com
-DOMAIN,passport.bilibili.com
 
 # ======= C ======= #
 # 彩云天气
@@ -59,12 +55,16 @@ DOMAIN,images.ctfassets.net
 DOMAIN,mapi.apptimize.com
 DOMAIN,md-i-s.apptimize.com
 
+# ======= D ======= #
+# DNS 无响应
+DOMAIN,adttrackingprd.hwwt8.com
+
 # ======= F ======= #
 # Foreca & Google
 DOMAIN,pagead2.googlesyndication.com
 DOMAIN,pubads.g.doubleclick.net
 DOMAIN,www.googleadservices.com
-DOMAIN-SUFFIX,adservice.google.com
+DOMAIN-KEYWORD,adservice.google.com
 DOMAIN-KEYWORD,ads.g.doubleclick
 
 # ======= G ======= #
@@ -73,7 +73,9 @@ DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,awaken.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
 # 工商银行 开屏广告
+DOMAIN,image.mybank.icbc.com.cn
 DOMAIN,pageviewp.icbc.com.cn
+DOMAIN-SUFFIX,mall.icbc.com.cn
 # 广告联盟
 DOMAIN,ad.zijieapi.com
 DOMAIN,i.snssdk.com
@@ -81,7 +83,6 @@ DOMAIN,is.snssdk.com
 DOMAIN,open.e.kuaishou.com
 DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
-DOMAIN-KEYWORD,-tos.pstatp.com
 DOMAIN-KEYWORD,asiad.byteactivity
 DOMAIN-KEYWORD,pangolin-sdk-toutiao
 DOMAIN-KEYWORD,pangolin.snssdk.com
@@ -91,6 +92,10 @@ DOMAIN-KEYWORD,video-cn.snssdk.com
 # ======= H ======= #
 # 海尔智家
 DOMAIN-SUFFIX,ehaier.com
+# httpdns
+DOMAIN,hdns.ksyun.com
+DOMAIN-KEYWORD,httpdns.
+DOMAIN-KEYWORD,httpdns-
 
 # ======= J ======= #
 # 建设银行
@@ -100,6 +105,8 @@ DOMAIN-KEYWORD,adv.ccb.com
 DOMAIN,dns.jd.com
 IP-CIDR,101.124.19.122/32
 IP-CIDR6,2402:db40:5100:1011::5/128
+# JavDB
+DOMAIN,api.liquidlink.cn
 
 # ======= K ======= #
 # 酷我音乐
@@ -107,8 +114,6 @@ DOMAIN,ad.tencentmusic.com
 DOMAIN,g.koowo.com
 DOMAIN,mobilead.kuwo.cn
 DOMAIN,rich.kuwo.cn
-DOMAIN,tmead.y.qq.com
-DOMAIN,tmeadcomm.y.qq.com
 
 # ======= L ======= #
 # 蓝奏云
@@ -134,6 +139,7 @@ DOMAIN,al-log.d.meituan.net
 DOMAIN,babel-statistics-android.d.meituan.net
 DOMAIN,maplocatesdksnapshot.d.meituan.net
 DOMAIN,metrics-picture.d.meituan.net
+DOMAIN,open.kuaishouzt.com
 DOMAIN,route-stats.d.meituan.net
 # 美颜相机
 DOMAIN,aaid.uyunad.com
@@ -150,6 +156,20 @@ DOMAIN,sin3-ib.adnxs.com
 DOMAIN,api.zuihuimai.com
 # 数字联盟
 DOMAIN-SUFFIX,shuzilm.cn
+# Soul
+DOMAIN,ad-h5-cdn.soulapp.cn
+DOMAIN,ad-h5-station-cdn.soulapp.cn
+DOMAIN,ad-r.soulapp.cn
+DOMAIN,soul-ad.soulapp.cn
+IP-CIDR,47.56.131.76/32
+IP-CIDR,47.97.215.55/32
+IP-CIDR,47.99.42.29/32
+IP-CIDR,120.27.235.201/32
+IP-CIDR,121.196.197.147/32
+# Speedtest
+DOMAIN,ads.pubmatic.com
+DOMAINid.hadron.ad.gt
+DOMAIN-KEYWORD,-adsystem.com
 
 # ======= T ======= #
 # 腾讯
@@ -157,15 +177,13 @@ DOMAIN,adsmind.gdtimg.com
 DOMAIN,info4.video.qq.com
 DOMAIN,info6.video.qq.com
 DOMAIN,ios.video.mpush.qq.com
-DOMAIN,mtrace.qq.com
 DOMAIN,otheve.beacon.qq.com
-DOMAIN,p.l.qq.com
 DOMAIN,pgdt.gtimg.cn
-DOMAIN,rpt.gdt.qq.com
+DOMAIN,tmead.y.qq.com
+DOMAIN,tmeadbak.y.qq.com
+DOMAIN,tmeadcomm.y.qq.com
 DOMAIN,tpns.qq.com
 DOMAIN,vv.video.qq.com
-DOMAIN,vv6.video.qq.com
-DOMAIN-SUFFIX,trace.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-KEYWORD,trace.qq.com
@@ -174,14 +192,16 @@ IP-CIDR,47.110.187.87/32
 
 # ======= W ======= #
 # 网易云音乐
-DOMAIN,httpdns.music.163.com
-DOMAIN,httpdns.n.netease.com
 DOMAIN,iadmat.nosdn.127.net
 DOMAIN,iadmatapk.nosdn.127.net
 DOMAIN,iadmusicmat.music.126.net
 DOMAIN,iadmusicmatvideo.music.126.net
 DOMAIN-SUFFIX,163jiasu.com
+DOMAIN,ipv4.music.163.com
+DOMAIN,ipv6.music.163.com
+
 # 微博 开屏广告
+DOMAIN,huodong.weibo.cn
 DOMAIN-SUFFIX,biz.weibo.com
 
 # ======= X ======= #
@@ -201,7 +221,7 @@ DOMAIN,amdc.m.youku.com
 DOMAIN,api.sm.cn
 DOMAIN,apiv4-iyes.youku.com
 DOMAIN,baichuan-sdk.alicdn.com
-DOMAIN,httpdns.alicdn.com
+DOMAIN,cad.youku.com
 DOMAIN,huichuan-mc.sm.cn
 DOMAIN,huichuan.sm.cn
 DOMAIN,iyes.youku.com

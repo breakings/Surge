@@ -1,0 +1,73 @@
+#!name = 网易云音乐
+#!desc = 音乐的力量不是用来看广告的
+#!author = RuCu6 Keywos
+#!update = 2024-01-27 10:25
+
+[URL Rewrite]
+
+^https?:\/\/httpdns.n\.netease\.com - reject
+^https?:\/\/httpdns\.music\.163\.com - reject
+
+[Rule]
+
+DOMAIN,iadmusicmat.music.126.net,REJECT-NO-DROP
+DOMAIN,iadmusicmatvideo.music.126.net,REJECT-NO-DROP
+DOMAIN,iadmat.nosdn.127.net,REJECT-NO-DROP
+DOMAIN,iadmatapk.nosdn.127.net,REJECT-NO-DROP
+DOMAIN,httpdns.n.netease.com,REJECT-NO-DROP
+DOMAIN,gdt.qq.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP
+DOMAIN,ipv4.music.163.com,REJECT-NO-DROP
+DOMAIN,ipv6.music.163.com,REJECT-NO-DROP
+
+[Script]
+
+# 热推 有话想说 分享一下 歌曲下的祝福等小提示 ｜ 评论区 乐迷 星评等级 关注 等图标
+网易云音乐 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/eapi\/(batch|v2\/resource\/comment\/floor\/)，requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
+
+# 推荐 | home | 主页
+网易云音乐 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/eapi\/(homepage\/block\/page|link\/page\/rcmd\/(block\/resource\/multi\/refresh|resource\/show)),requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
+
+# 底部tab
+网易云音乐 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/eapi\/link\/home\/framework\/tab,requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
+
+# 发现
+网易云音乐 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/eapi\/link\/page\/discovery\/resource\/show,requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
+
+# 我的页面
+网易云音乐 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/eapi\/link\/position\/show\/resource url script-response-body https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
+
+# 会员伪装
+网易云音乐 = type=http-response, pattern=^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle|vipnewcenter\/app\/resource\/newaccountpage)，requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
+
+# effect
+网易云音乐 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/eapi\/song\/play\/more\/list\/，requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
+
+# 显示未关注你
+网易云音乐 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/eapi\/user\/follow\/users\/mixed\/，requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
+
+[Map Local]
+
+# 播放页,多余图标,各种小提示
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(ios\/version|mlivestream\/entrance\/playpage\/|link\/position\/show\/strategy|link\/scene\/show\/resource|v1\/content\/exposure\/comment\/banner\/) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 会员伪装
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+
+# 播放页 歌名下方 乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/|mine\/applet\/redpoint|music\/songshare\/text\/recommend\/|resniche\/position\/play\/new\/|resource\/comments?\/musiciansaid\/|user\/sub\/artist) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 今日运势 商城 Beat专区 音乐收藏家 | type:ACTIVITY | 低至5.2折
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(delivery\/(batch-deliver|deliver)|moment\/tab\/info\/|side-bar\/mini-program\/music-service\/account|yunbei\/account\/entrance\/) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 开屏广告
+^https?:\/\/interface3?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 搜索页 搜索词 热搜卡片 猜你喜欢 我的应用下方提醒
+^https?:\/\/interface3?\.music\.163\.com\/w?eapi\/(activity\/bonus\/playpage\/time\/query|resource-exposure\/|search\/(chart\/|default\/|rcmd\/keyword\/|specialkeyword\/)) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+[MITM]
+
+hostname =  %APPEND% interface.music.163.com, interface3.music.163.com, httpdns.n.netease.com, ipv4.music.163.com
+ 
