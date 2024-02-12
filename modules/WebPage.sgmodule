@@ -1,7 +1,7 @@
-#!name=WebPage
-#!desc=WebPage
-#!author = RuCu6
-#!update = 2024-01-12 10:20
+#!name = WebPage
+#!desc = 移除网页广告
+#!author = RuCu6 limbopro
+#!update = 2024-02-14 16:05
 
 [URL Rewrite]
 
@@ -11,8 +11,6 @@
 ^https?:\/\/18comic\.(org|vip)\/templates\/frontend\/airav\/js\/jquery.avs.*?\.js.* - reject
 # Avple 弹窗跳转
 ^https?:\/\/assert\.avple\.tv\/file\/avple-images\/ad\.js - reject
-# missav 播放页弹窗 (https://missav.com/) //missav.com
-^https?:\/\/[0-9a-zA-Z]{10,16}\.cloudfront\.net\/\?[a-z]{3,7}=\d{4,8} - reject
 
 [Script]
 
@@ -38,10 +36,10 @@ JavBus = type=http-response, pattern="^https?:\/\/(\w{0,3}(\.){0,1}(javbus)(\.)\
 Avple = type=http-response, pattern="^https?:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/avpleQX.js, timeout=60, script-update-interval=0
 
 # Jable (https://jable.tv/) //jable.tv
-Jable = type=http-response, pattern="^https?:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, timeout=60, script-update-interval=0
+Jable = type=http-response, pattern=^https?:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, timeout=60, script-update-interval=0
 
 # missav 播放页弹窗 (https://missav.com/) //missav.com
-missav = type=http-response, pattern="^https?:\/\/(\w{0,3}(\.){0,1}(missav)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, timeout=60, script-update-interval=0
+missav = type=http-response, pattern=^https:\/\/missav\.com\/(dm\d+\/)?\w{2}\/[\w-]+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
 
 [Map Local]
 

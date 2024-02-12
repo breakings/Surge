@@ -1,7 +1,7 @@
 #!name = 网易云音乐
 #!desc = 音乐的力量不是用来看广告的
 #!author = RuCu6 Keywos
-#!update = 2024-01-27 10:25
+#!update = 2024-02-17 20:10
 
 [URL Rewrite]
 
@@ -40,8 +40,8 @@ DOMAIN,ipv6.music.163.com,REJECT-NO-DROP
 # 会员伪装
 网易云音乐 = type=http-response, pattern=^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle|vipnewcenter\/app\/resource\/newaccountpage)，requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
 
-# effect
-网易云音乐 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/eapi\/song\/play\/more\/list\/，requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
+# 播放音效
+//网易云音乐 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/eapi\/song\/play\/more\/list\/，requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
 
 # 显示未关注你
 网易云音乐 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/eapi\/user\/follow\/users\/mixed\/，requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, timeout=60, script-update-interval=0
