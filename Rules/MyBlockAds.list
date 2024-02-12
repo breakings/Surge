@@ -168,7 +168,7 @@ IP-CIDR,120.27.235.201/32
 IP-CIDR,121.196.197.147/32
 # Speedtest
 DOMAIN,ads.pubmatic.com
-DOMAINid.hadron.ad.gt
+DOMAIN,id.hadron.ad.gt
 DOMAIN-KEYWORD,-adsystem.com
 
 # ======= T ======= #
