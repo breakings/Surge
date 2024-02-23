@@ -42,8 +42,7 @@ weibo_13 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/messageflow
 
 weibo_14 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/search\/(container_timeline|finder)\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, timeout=60, script-update-interval=0
 
-weibo_15 = type=http-response, pattern=^https:\/\/api\.weibo\.
-cn\/2\/searchall\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, timeout=60, script-update-interval=0
+weibo_15 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/searchall\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, timeout=60, script-update-interval=0
 
 weibo_16 = type=http-response, pattern=^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, timeout=60, script-update-interval=0
 
