@@ -8,17 +8,17 @@
 
 [Map Local]
 
-^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList data-type=text data="{}" status-code=200
 
-^https?:\/\/t-dsp\.pinduoduo\.com data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/t-dsp\.pinduoduo\.com data-type=text data="{}" status-code=200
 
-^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php data-type=text data="{}" status-code=200
 
-^http?:\/\/sfo\.mddcloud\.com\.cn\/api\/v2\/sfo\/popup_displays? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^http?:\/\/sfo\.mddcloud\.com\.cn\/api\/v2\/sfo\/popup_displays? data-type=text data="{}" status-code=200
 
-^https?:\/\/toblog\.ctobsnssdk\.com data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/toblog\.ctobsnssdk\.com data-type=text data="{}" status-code=200
 
-^https?:\/\/conf-darwin\.xycdn\.com data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/conf-darwin\.xycdn\.com data-type=text data="{}" status-code=200
 
 [MITM]
 

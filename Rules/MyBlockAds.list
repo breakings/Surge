@@ -1,4 +1,4 @@
-# 2024-05-31 17:35
+# 2024-08-03 08:30
 # 搬运自 RuCu6
 
 # ======= A ======= #
@@ -46,6 +46,7 @@ IP-CIDR,180.76.76.200/32
 
 # ======= C ======= #
 # 彩云天气
+DOMAIN,abyss.cyapi.cn
 DOMAIN,ad.cyapi.cn
 # 昌原云充
 DOMAIN,m.adyounger.com
@@ -61,6 +62,10 @@ DOMAIN,md-i-s.apptimize.com
 # DNS 无响应
 DOMAIN,adttrackingprd.hwwt8.com
 
+# ======= F ======= #
+# 放松双眼
+DOMAIN,adservice.sigmob.cn
+
 # ======= G ======= #
 # 高德地图
 DOMAIN,amap-aos-info-nogw.amap.com
@@ -69,12 +74,21 @@ DOMAIN,pageviewp.icbc.com.cn
 DOMAIN-SUFFIX,mall.icbc.com.cn
 # 广告联盟
 DOMAIN,ad.zijieapi.com
+DOMAIN,adapi.izuiyou.com
+DOMAIN,adtracker.adfunlink.com
+DOMAIN,dig.bdurl.net
+DOMAIN,dsp-x.jd.com
+DOMAIN,et.tanx.com
+DOMAIN,gdfp.gifshow.com
 DOMAIN,init.supersonicads.com
 DOMAIN,is.snssdk.com
+DOMAIN,janapi.jd.com
+DOMAIN,mercury-gateway.ixiaochuan.cn
 DOMAIN,open.e.kuaishou.com
 DOMAIN,open.kuaishou.com
 DOMAIN,pagead2.googlesyndication-cn.com
 DOMAIN,pagead2.googlesyndication.com
+DOMAIN,sdk.e.qq.com
 DOMAIN,ws.tapjoyads.com
 DOMAIN,www.googleadservices.com
 DOMAIN-SUFFIX,applovin.com
@@ -82,11 +96,14 @@ DOMAIN-SUFFIX,applvn.com
 DOMAIN-SUFFIX,ads.linkedin.com
 DOMAIN-SUFFIX,ads.vungle.com
 DOMAIN-SUFFIX,adservice.google.com
+DOMAIN-SUFFIX,adukwai.com
 DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,kuaishouzt.com
 DOMAIN-SUFFIX,miaozhen.com
+DOMAIN-KEYWORD,ubixioe.com
 DOMAIN-SUFFIX,unityads.unity3d.com
+DOMAIN-SUFFIX,zijieapi.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,ads.g.doubleclick
 DOMAIN-KEYWORD,asiad.byteactivity
@@ -115,6 +132,9 @@ IP-CIDR6,2402:db40:5100:1011::5/128
 DOMAIN,api.liquidlink.cn
 
 # ======= K ======= #
+# 酷狗音乐
+DOMAIN,ads.service.kugou.com
+DOMAIN,adserviceretry.kugou.com
 # 酷我音乐
 DOMAIN,ad.tencentmusic.com
 DOMAIN,g.koowo.com
@@ -154,6 +174,10 @@ DOMAIN,acdn.adnxs.com
 DOMAIN,mediation.adnxs.com
 DOMAIN,sin3-ib.adnxs.com
 
+# ======= Q ======= #
+# 其他
+DOMAIN,affcpatrk.com
+
 # ======= S ======= #
 # 什么值得买
 DOMAIN,api.zuihuimai.com
@@ -164,11 +188,6 @@ DOMAIN,ad-h5-cdn.soulapp.cn
 DOMAIN,ad-h5-station-cdn.soulapp.cn
 DOMAIN,ad-r.soulapp.cn
 DOMAIN,soul-ad.soulapp.cn
-IP-CIDR,47.56.131.76/32
-IP-CIDR,47.97.215.55/32
-IP-CIDR,47.99.42.29/32
-IP-CIDR,120.27.235.201/32
-IP-CIDR,121.196.197.147/32
 # Speedtest
 DOMAIN,ads.pubmatic.com
 DOMAIN,id.hadron.ad.gt
@@ -200,7 +219,6 @@ DOMAIN,iadmat.nosdn.127.net
 DOMAIN,iadmatapk.nosdn.127.net
 DOMAIN,iadmusicmat.music.126.net
 DOMAIN,iadmusicmatvideo.music.126.net
-DOMAIN-SUFFIX,163jiasu.com
 DOMAIN,ipv4.music.163.com
 DOMAIN,ipv6.music.163.com
 
@@ -208,8 +226,9 @@ DOMAIN,ipv6.music.163.com
 DOMAIN,huodong.weibo.cn
 DOMAIN-SUFFIX,biz.weibo.com
 # 微信
-DOMAIN,wxsnsdy.wxs.qq.com
-DOMAIN,wxsnsdythumb.wxs.qq.com
+DOMAIN,badjs.weixinbridge.com
+DOMAIN,dns.weixin.qq.com.cn
+DOMAIN-SUFFIX,wxs.qq.com
 
 # ======= X ======= #
 # 小米
@@ -221,10 +240,8 @@ DOMAIN,sdkconfig.ad.xiaomi.com
 
 # ======= Y ======= #
 # 移花宫
-DOMAIN,3117kc.saigmpl.com
-DOMAIN,314240585f1fb7266kcc.fwxhvvd.com
-DOMAIN,314240585f1fb7266kg.oiocklg.com
 DOMAIN,tong.8888888888.bid
+DOMAIN-KEYWORD,4240585f1fb7266
 # 优酷 & 菜鸟
 #DOMAIN,acs.youku.com
 DOMAIN,acs4baichuan.m.taobao.com
