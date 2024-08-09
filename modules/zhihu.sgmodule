@@ -1,7 +1,7 @@
 #!name = 知乎
 #!desc = 在知识的海洋里狗刨
 #!author = RuCu6 app2smile
-#!update = 2024-07-28 07:55
+#!update = 2024-10-02 13:00
 
 [URL Rewrite]
 
@@ -10,7 +10,7 @@
 
 # 其他,服务器推送配置
 ^https:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config - reject
-^https:\/\/link\.zhihu\.com\/\?target=(https?)?(%3A|:)?(\/\/|%2F%2F)?(.*?)(&source.*)?$ http://$4 302
+^https:\/\/link\.zhihu\.com\/\?target=(?:https?)?(?:%3A|:)?(?:\/\/|%2F%2F)?(.*) http://$1 302
 
 # 网页版去广告 //www.zhihu.com, zhuanlan.zhihu.com
 ^https:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation - reject
@@ -22,27 +22,27 @@
 [Script]
 
 # 首页 悬浮图标,顶部横幅,开屏广告,关注页推荐,推荐信息流,热榜信息流,热榜直播,回答底部卡片
-ZhiHu = type=http-response, pattern=^https:\/\/(api|page-info)\.zhihu\.com\/(answers|articles)\/v2\/\d+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
-zhihu_1 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
-zhihu_2 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
-zhihu_3 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/hot-lists\/total|topstory\/recommend), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
-知乎 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/root\/tab，requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
-zhihu_4 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
+ZhiHu = type=http-response, pattern=^https:\/\/(api|page-info)\.zhihu\.com\/(answers|articles)\/v2\/\d+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
+zhihu_1 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
+zhihu_2 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
+zhihu_3 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/hot-lists\/total|topstory\/recommend), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
+知乎 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/root\/tab，requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
+zhihu_4 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
 
 # 会员页面 弹窗,悬浮动图
-ZhiHu = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
+ZhiHu = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
 
 # 搜索页 关键词,猜你想搜
-replaceBody = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\?, requires-body=true, max-size=3145728, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CommonScript/replace-body.js, timeout=60, argument=""recommend_queries":\{.+\}->"recommend_queries":{}"
+replaceBody = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\?, requires-body=true, max-size=3145728, script-path=https://kelee.one/Resource/Script/CommonScript/replace-body.js, timeout=60, argument=""recommend_queries":\{.+\}->"recommend_queries":{}"
 
 # 回答详情页,评论区顶部,下一个回答
-zhihu_5 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/next-(bff|data|render)\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
-zhihu_6 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/questions\/\d+(\/answers|\/feeds|\?include=), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
-zhihu_7 = type=http-response, pattern=^https:\/\/www\.zhihu\.com\/api\/v4\/(articles|answers)\/\d+\/recommendations?\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
+zhihu_5 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/next-(bff|data|render)\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
+zhihu_6 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/questions\/\d+(\/answers|\/feeds|\?include=), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
+zhihu_7 = type=http-response, pattern=^https:\/\/www\.zhihu\.com\/api\/v4\/(articles|answers)\/\d+\/recommendations?\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
 
 # 其他,服务器推送配置
-zhihu_8 = type=http-response, pattern=^https:\/\/appcloud2\.zhihu\.com\/v3\/config, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
-zhihu_9 = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
+zhihu_8 = type=http-response, pattern=^https:\/\/appcloud2\.zhihu\.com\/v3\/config, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
+zhihu_9 = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/zhihu.js, timeout=60, script-update-interval=0
 
 [Map Local]
 # 首页 悬浮图标,顶部横幅,开屏广告,关注页推荐,推荐信息流,热榜信息流,热榜直播,回答底部卡片
@@ -58,7 +58,7 @@ zhihu_9 = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud
 ^https:\/\/api\.zhihu\.com\/me\/guides data-type=text data="{}" status-code=200
 
 # 搜索页 关键词,猜你想搜
-^https:\/\/api\.zhihu\.com\/search\/preset_words data-type=text data="{}" status-code=200
+^https:\/\/api\.zhihu\.com\/search\/(hot_search|preset_words) data-type=text data="{}" status-code=200
 
 ^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(article|answer)\/\d+ data-type=text data="{}" status-code=200
 

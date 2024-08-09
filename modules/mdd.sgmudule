@@ -8,7 +8,15 @@
 
 [Map Local]
 
-^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList data-type=text data="{}" status-code=200
+^https?:\/\/md-cfg-[a-z0-9]+\.ubixioe\.com\/mob\/mediation\/v[0-9]+\/(conf|init) data-type=text data="{}" status-code=200
+
+^https?:\/\/[a-zA-Z0-9-]+\.ubixioe\.com\/mob\/sdk\/v[0-9]+\/(endpoint|init) data-type=text data="{}" status-code=200
+
+^https?:\/\/umt-data-u1\.ubixioe\.com\/daq data-type=text data="{}" status-code=200
+
+^https?:\/\/md-data-u1\.ubixioe\.com\/md2 data-type=text data="{}" status-code=200
+
+^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/(advertList|region) data-type=text data="{}" status-code=200
 
 ^https?:\/\/t-dsp\.pinduoduo\.com data-type=text data="{}" status-code=200
 
@@ -22,4 +30,4 @@
 
 [MITM]
 
-hostname = %APPEND% sfo.mddcloud.com.cn,mob.mddcloud.com.cn,toblog.ctobsnssdk.com,t-dsp.pinduoduo.com,mobads-pre-config.cdn.bcebos.com,sdk1xyajs.data.kuiniuca.com,conf-darwin.xycdn.com,*.ubixioe.com 
+hostname = %APPEND% *.ubixioe.com,xsfo.mddcloud.com.cn,mob.mddcloud.com.cn,toblog.ctobsnssdk.com,t-dsp.pinduoduo.com,mobads-pre-config.cdn.bcebos.com,sdk1xyajs.data.kuiniuca.com,conf-darwin.xycdn.com,*.ubixioe.com 

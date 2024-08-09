@@ -1,4 +1,4 @@
-# 2024-08-03 08:30
+# 2024-08-08 08:50
 # 搬运自 RuCu6
 
 # ======= A ======= #
@@ -30,7 +30,7 @@ DOMAIN-SUFFIX,iadsdk.apple.com
 # 安全浏览限制解除
 DOMAIN,lookup.api.bsb.baidu.com
 DOMAIN-SUFFIX,u3.ucweb.com
-DOMAIN-KEYWORD,safebrowsing.
+#DOMAIN-KEYWORD,safebrowsing.
 
 # ======= B ======= #
 # 百度
@@ -89,6 +89,7 @@ DOMAIN,open.kuaishou.com
 DOMAIN,pagead2.googlesyndication-cn.com
 DOMAIN,pagead2.googlesyndication.com
 DOMAIN,sdk.e.qq.com
+DOMAIN,tangram.e.qq.com
 DOMAIN,ws.tapjoyads.com
 DOMAIN,www.googleadservices.com
 DOMAIN-SUFFIX,applovin.com
@@ -103,6 +104,7 @@ DOMAIN-SUFFIX,kuaishouzt.com
 DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-KEYWORD,ubixioe.com
 DOMAIN-SUFFIX,unityads.unity3d.com
+DOMAIN-SUFFIX,v.smtcdns.com
 DOMAIN-SUFFIX,zijieapi.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,ads.g.doubleclick

@@ -18,34 +18,34 @@
 [Script]
 
 ## 百度防跳转
-baiduNoRedirect = type=http-response, pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js, timeout=60, script-update-interval=0
+baiduNoRedirect = type=http-response, pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/baidu/baiduNoRedirect.js, timeout=60, script-update-interval=0
 
 ## 百度首页
-baidu-index = type=http-response, pattern=^https:\/\/(www|m)\.baidu\.com(\/|\/\?(tn=&)?from=\d+\w)?$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js, timeout=60, script-update-interval=0
+baidu-index = type=http-response, pattern=^https:\/\/(www|m)\.baidu\.com(\/|\/\?(tn=&)?from=\d+\w)?$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/webpage/baidu-index.js, timeout=60, script-update-interval=0
 
 ## 百度知道
-baidu-zhidao = type=http-response, pattern=^https:\/\/zhidao\.baidu\.com\/(question|index|\?fr|\?word), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js, timeout=60, script-update-interval=0
+baidu-zhidao = type=http-response, pattern=^https:\/\/zhidao\.baidu\.com\/(question|index|\?fr|\?word), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/webpage/baidu-zhidao.js, timeout=60, script-update-interval=0
 
 # PornHub (https://cn.pornhub.com/) //*.pornhub.com
-PornHub = type=http-response, pattern="^https:\/\/(\w{0,3}(\.){0,1}(pornhub)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, timeout=60, script-update-interval=0
+PornHub = type=http-response, pattern="^https:\/\/(\w{0,3}(\.){0,1}(pornhub)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/limbo/Adblock4limboQX.js, timeout=60, script-update-interval=0
 
 # 禁漫天堂 (https://18comic.org/) //18comic.org, 18comic.vip
-18comic = type=http-response, pattern="^https:\/\/(\w{0,3}(\.){0,1}(18comic)(\.)\w{0,3})(?!.*?(\/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, timeout=60, script-update-interval=0
+18comic = type=http-response, pattern="^https:\/\/(\w{0,3}(\.){0,1}(18comic)(\.)\w{0,3})(?!.*?(\/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/limbo/Adblock4limboQX.js, timeout=60, script-update-interval=0
 
 # JavBus (https://www.javbus.com/) //www.javbus.com
-JavBus = type=http-response, pattern="^https:\/\/(\w{0,3}(\.){0,1}(javbus)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/javbusQX.js, timeout=60, script-update-interval=0
+JavBus = type=http-response, pattern="^https:\/\/(\w{0,3}(\.){0,1}(javbus)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/limbo/javbusQX.js, timeout=60, script-update-interval=0
 
 # JavDB //javdb.com
-JavDB = type=http-response, pattern="^https:\/\/javdb\.com\/", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/javdb.js, timeout=60, script-update-interval=0
+JavDB = type=http-response, pattern="^https:\/\/javdb\.com\/(?!over18\?)", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/webpage/javdb.js, timeout=60, script-update-interval=0
 
 # Avple (https://avple.tv/) //avple.tv
-Avple = type=http-response, pattern="^https:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/avpleQX.js, timeout=60, script-update-interval=0
+Avple = type=http-response, pattern="^https:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*", requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/limbo/avpleQX.js, timeout=60, script-update-interval=0
 
 # Jable (https://jable.tv/) //jable.tv
-Jable = type=http-response, pattern=^https:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, timeout=60, script-update-interval=0
+Jable = type=http-response, pattern=^https:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/limbo/Adblock4limboQX.js, timeout=60, script-update-interval=0
 
 # missav 播放页弹窗 (https://missav.com/) //missav.com
-missav = type=http-response, pattern=^https:\/\/missav\.com\/(dm\d+\/)?\w{2}\/[\w-]+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
+missav = type=http-response, pattern=^https:\/\/missav\.com\/(dm\d+\/)?\w{2}\/[\w-]+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
 
 [Map Local]
 
