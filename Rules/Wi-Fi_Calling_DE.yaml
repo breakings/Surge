@@ -1,0 +1,12 @@
+# 规则名称: Wi-Fi Calling DE
+# 规则统计: 5
+
+no_resolve: true
+domain_set:
+  - gspe1-ssl.ls.apple.com
+  - mcc262.pub.3gppnetwork.org
+domain_suffix_set:
+  - gspe1-ssl.ls.apple.com
+  - mcc262.pub.3gppnetwork.org
+ip_cidr_set:
+  - 139.7.2.0/24

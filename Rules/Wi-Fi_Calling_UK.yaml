@@ -1,0 +1,20 @@
+# 规则名称: Wi-Fi Calling UK
+# 规则统计: 13
+
+no_resolve: true
+domain_set:
+  - entsrv-uk.vodafone.com
+  - giffgaff.com
+  - ls.apple.com
+  - mcc234.pub.3gppnetwork.org
+  - vuk-gto.prod.ondemandconnectivity.com
+domain_suffix_set:
+  - entsrv-uk.vodafone.com
+  - giffgaff.com
+  - ls.apple.com
+  - mcc234.pub.3gppnetwork.org
+  - vuk-gto.prod.ondemandconnectivity.com
+ip_cidr_set:
+  - 46.68.0.0/17
+  - 87.194.0.0/16
+  - 88.82.0.0/19

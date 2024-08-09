@@ -1,0 +1,25 @@
+#!name=Advertisement
+#!desc=自用去广告
+#!author=breakings
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1059.png
+#!update=2024-09-14 23:00
+
+[Rewrite]
+
+# 链工宝
+^https?:\/\/js.\lgb360\.com\/lgb\/server\/banner\/findBannerList - reject-dict
+^https?:\/\/js\.lgb360\.com\/lgb\/server\/startImg\/findStartImgN - reject-dict
+
+# 拓词
+^https?:\/\/api\.towords\.net\/sys_ad\/(get_app_start_pic_cache|get_valid_ad_pic_list|get_app_start_info|record_ad_browse_action)\.do - reject-dict
+^https?:\/\/api\.towords\.net\/user_reminder\/get_user_reminder_info\.do - reject-dict
+^https?:\/\/api\.towords\.net\/product\/mgy_purchase - reject-dict
+
+# 百词斩
+^https?:\/\/advertise\.bczeducation\.cn\/rpc\/advertise\/(get_loading_ad_items|get_main_view_bottom_advs_v2|get_loading_ad_info|get_startup_ad|get_main_view_top_banner_advs|get_practice_popup_adv|report_startup_ad_event) - reject-dict
+^https?:\/\/ad\.bczcdn\.com\/ - reject-dict
+^https?:\/\/advertise\.baicizhan\.(com|org)\/rpc\/advertise\/ - reject-dict
+^https?:\/\/notify\.baicizhan\.com\/rpc\/notify\/get_latest_notify - reject-dict
+
+[MITM]
+hostname = js.lgb360.com, api.towords.net, advertise.bczeducation.com, ad.bczcdn.com, advertise.baicizhan.com, advertise.baicizhan.org, notify.baicizhan.com

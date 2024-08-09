@@ -1,7 +1,7 @@
 #!name = MyBlockAds
 #!desc = 去广告合集, 以下app请使用单独配置文件: 高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎
 #!author = RuCu6
-#!update = 2024-08-03 08:30
+#!update = 2024-08-24 12:50
 
 [URL Rewrite]
 
@@ -52,58 +52,60 @@
 [Script]
 
 # 12306 //ad.12306.cn, mobile.12306.cn
-12306 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, timeout=60, script-update-interval=0
-12306 = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60, script-update-interval=0
+12306 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/12306.js, timeout=60, script-update-interval=0
+12306 = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/header.js, timeout=60, script-update-interval=0
 # amdc
-header = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60, script-update-interval=0
+header = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/header.js, timeout=60, script-update-interval=0
 # 阿里云盘 //*api.alipan.com, member.alipan.com
-阿里云盘 = type=http-response, pattern=^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, timeout=60, script-update-interval=0
-阿里云盘 = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, timeout=60, script-update-interval=0
+阿里云盘 = type=http-response, pattern=^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/adrive.js, timeout=60, script-update-interval=0
+阿里云盘 = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/adrive.js, timeout=60, script-update-interval=0
 # 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-cainiao = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, timeout=60, script-update-interval=0
-阿里巴巴 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
-阿里巴巴 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
+cainiao = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/cainiao.js, timeout=60, script-update-interval=0
+阿里巴巴 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
+阿里巴巴 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
 # 百度云 //pan.baidu.com, update.pan.baidu.com
-百度云 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/api\/getsyscfg\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, timeout=60, script-update-interval=0
-百度云 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, timeout=60, script-update-interval=0
+百度云 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/api\/getsyscfg\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/baidu/baiduCloud.js, timeout=60, script-update-interval=0
+百度云 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/baidu/baiduCloud.js, timeout=60, script-update-interval=0
 # 草榴社区 //2023.redircdn.com
-草榴社区 = type=http-response, pattern=^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
+草榴社区 = type=http-response, pattern=^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
 # JavDB //api.hechuangxinxi.xyz, jdforrepam.com
-JavDB = type=http-response, pattern=^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
+JavDB = type=http-response, pattern=^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
 # 简书跳过重定向页面以直接访问 //links.jianshu.com, www.jianshu.com
-noRedirect_1 = type=http-request, pattern=^https:\/\/links\.jianshu\.com\/go\?to=, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js, timeout=60, script-update-interval=0
-noRedirect_2 = type=http-request, pattern=^https:\/\/www\.jianshu\.com\/go-wild\?ac=\d&url=, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js, timeout=60, script-update-interval=0
+noRedirect_1 = type=http-request, pattern=^https:\/\/links\.jianshu\.com\/go\?to=, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/noRedirect.js, timeout=60, script-update-interval=0
+noRedirect_2 = type=http-request, pattern=^https:\/\/www\.jianshu\.com\/go-wild\?ac=\d&url=, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/noRedirect.js, timeout=60, script-update-interval=0
 # 京东 //api.m.jd.com
-京东 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js, timeout=60, script-update-interval=0
+京东 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/jingdong.js, timeout=60, script-update-interval=0
 # 京东极速版 //api.m.jd.com
-replaceBody = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, requires-body=true, max-size=3145728, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CommonScript/replace-body.js, timeout=60, argument="jdLiteAdvertisingVO->rucu6"
+replaceBody = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, requires-body=true, max-size=3145728, script-path=https://kelee.one/Resource/Script/CommonScript/replace-body.js, timeout=60, argument="jdLiteAdvertisingVO->rucu6"
 # 酷安 //api.coolapk.com
-酷安 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, timeout=60, script-update-interval=0
-酷安 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, timeout=60, script-update-interval=0
-酷安 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, timeout=60, script-update-interval=0
+酷安 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/coolapk.js, timeout=60, script-update-interval=0
+酷安 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/coolapk.js, timeout=60, script-update-interval=0
+酷安 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/coolapk.js, timeout=60, script-update-interval=0
 # 酷狗音乐 //adserviceretry.kglink.cn, gateway.kugou.com
-酷狗音乐 = type=http-response, pattern=^https:\/\/gateway\.kugou\.com\/adp\/ad\/v1\/mine_top_banner\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/kugou.js, timeout=60, script-update-interval=0
-酷狗音乐 = type=http-response, pattern=^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/kugou.js, timeout=60, script-update-interval=0
+酷狗音乐 = type=http-response, pattern=^https:\/\/gateway\.kugou\.com\/(adp\/ad\/v1\/mine_top_banner|ads\.gateway\/v2\/home_card), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/kugou.js, timeout=60, script-update-interval=0
+酷狗音乐 = type=http-response, pattern=^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/kugou.js, timeout=60, script-update-interval=0
+# 搜狗输入法 //sec.sginput.qq.com
+搜狗输入法 = type=http-response, pattern=^https:\/\/sec\.sginput\.qq\.com\/q, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/header.js, timeout=60, script-update-interval=0
 # 贴吧全面去广告 //tiebac.baidu.com
-贴吧 = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, timeout=60, script-update-interval=0
-tiebaProto = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd, requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js, timeout=60, script-update-interval=0
-贴吧 = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/s\/sync$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, timeout=60, script-update-interval=0
-贴吧 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/tiebaads\/commonbatch\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, timeout=60, script-update-interval=0
+贴吧 = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/baidu/tiebaJson.js, timeout=60, script-update-interval=0
+tiebaProto = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd, requires-body=true, max-size=3145728, binary-body-mode=true, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/baidu/tiebaProto.js, timeout=60, script-update-interval=0
+贴吧 = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/s\/sync$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/baidu/tiebaJson.js, timeout=60, script-update-interval=0
+贴吧 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/tiebaads\/commonbatch\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/baidu/tiebaJson.js, timeout=60, script-update-interval=0
 # 网易新闻 //gw.m.163.com, nex.163.com
-网易新闻 = type=http-response, pattern=^https:\/\/gw\.m\.163\.com\/nc\/api\/v1\/feed\/dynamic\/headline-list\?，requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/news163.js, timeout=60, script-update-interval=0
-网易新闻 = type=http-response, pattern=^https:\/\/nex\.163\.com\/q，requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/news163.js, timeout=60, script-update-interval=0
-网易新闻 = type=http-response, pattern=^https:\/\/gw\.m\.163\.com\/nc\/api\/v1\/search\/hot-word，requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/news163.js, timeout=60, script-update-interval=0
+网易新闻 = type=http-response, pattern=^https:\/\/gw\.m\.163\.com\/nc\/api\/v1\/feed\/dynamic\/headline-list\?，requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/news163.js, timeout=60, script-update-interval=0
+网易新闻 = type=http-response, pattern=^https:\/\/nex\.163\.com\/q，requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/news163.js, timeout=60, script-update-interval=0
+网易新闻 = type=http-response, pattern=^https:\/\/gw\.m\.163\.com\/nc\/api\/v1\/search\/hot-word，requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/news163.js, timeout=60, script-update-interval=0
 # 微信 //mp.weixin.qq.com
 ##微信封禁页面 //weixin110.qq.com, security.wechat.com
-wechat110 = type=http-response, pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js, timeout=60, script-update-interval=0
+wechat110 = type=http-response, pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/wechat/unlockUrls.js, timeout=60, script-update-interval=0
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
 ## 开屏广告
-开屏广告 = type=http-response, pattern=^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
+开屏广告 = type=http-response, pattern=^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
 # 中国农业银行 //mobilepaas.abchina.com.cn
-中国农业银行 = type=http-response, pattern=^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60, script-update-interval=0
+中国农业银行 = type=http-response, pattern=^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/header.js, timeout=60, script-update-interval=0
 # 中国移动云盘 //ad.mcloud.139.com, jzts.cmpassport.com
-中国移动云盘 = type=http-response, pattern=^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cloud139.js, timeout=60, script-update-interval=0
-中国移动云盘 = type=http-response, pattern=^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cloud139.js, timeout=60, script-update-interval=0
+中国移动云盘 = type=http-response, pattern=^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/cloud139.js, timeout=60, script-update-interval=0
+中国移动云盘 = type=http-response, pattern=^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/breakings/Surge/master/Scripts/cloud139.js, timeout=60, script-update-interval=0
 
 [Map Local]
 
@@ -163,4 +165,4 @@ https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(octopus|tps-1125-16
 
 [MITM]
 
-hostname = %APPEND% ad.12306.cn,mobile.12306.cn,*.58cdn.com.cn,app.58.com,pic?.ajkimg.com,gw.aihuishou.com,list-app-m.i4.cn,*api.alipan.com,member.alipan.com,acs.m.taobao.com,heic.alicdn.com,guide-acs.m.taobao.com,poplayer.template.alibaba.com,pan.baidu.com,2023.redircdn.com,api.chelaile.net.cn,web.chelaile.net.cn,app-gw.csdn.net,api.douban.com,elemecdn.com,fuss10.elemecdn.com,www1.elecfans.com,image.mybank.icbc.com.cn,api.hechuangxinxi.xyz,jdforrepam.com,links.jianshu.com,www.jianshu.com,api.m.jd.com,gab.122.gov.cn,res.kfc.com.cn,api.coolapk.com,adserviceretry.kglink.cn,gateway.kugou.com,p0.pipi.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,ssp.soulapp.cn,tiebac.baidu.com,osg-service.sgcc.com.cn,gw.m.163.com,nex.163.com,mp.weixin.qq.com,weixin110.qq.com,security.wechat.com,api.m.mi.com,api.jr.mi.com,home.mi.com,shop-api.retail.mi.com,wallet.95516.com,mobilepaas.abchina.com.cn,client.app.coc.10086.cn,ad.mcloud.139.com,jzts.cmpassport.com
+hostname = %APPEND% ad.12306.cn,mobile.12306.cn,*.58cdn.com.cn,app.58.com,pic?.ajkimg.com,gw.aihuishou.com,list-app-m.i4.cn,*api.alipan.com,member.alipan.com,acs.m.taobao.com,heic.alicdn.com,guide-acs.m.taobao.com,poplayer.template.alibaba.com,pan.baidu.com,2023.redircdn.com,api.chelaile.net.cn,web.chelaile.net.cn,app-gw.csdn.net,api.douban.com,elemecdn.com,fuss10.elemecdn.com,www1.elecfans.com,image.mybank.icbc.com.cn,api.hechuangxinxi.xyz,jdforrepam.com,links.jianshu.com,www.jianshu.com,api.m.jd.com,gab.122.gov.cn,res.kfc.com.cn,api.coolapk.com,adserviceretry.kglink.cn,gateway.kugou.com,p0.pipi.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,ssp.soulapp.cn,sec.sginput.qq.com,tiebac.baidu.com,osg-service.sgcc.com.cn,gw.m.163.com,nex.163.com,mp.weixin.qq.com,weixin110.qq.com,security.wechat.com,api.m.mi.com,api.jr.mi.com,home.mi.com,shop-api.retail.mi.com,wallet.95516.com,mobilepaas.abchina.com.cn,client.app.coc.10086.cn,ad.mcloud.139.com,jzts.cmpassport.com
