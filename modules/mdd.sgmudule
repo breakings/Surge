@@ -8,6 +8,8 @@
 
 [Map Local]
 
+^http?:\/\/api-htp\.beizi\.biz data-type=text data="{}" status-code=200
+
 ^https?:\/\/md-cfg-[a-z0-9]+\.ubixioe\.com\/mob\/mediation\/v[0-9]+\/(conf|init) data-type=text data="{}" status-code=200
 
 ^https?:\/\/[a-zA-Z0-9-]+\.ubixioe\.com\/mob\/sdk\/v[0-9]+\/(endpoint|init) data-type=text data="{}" status-code=200
@@ -30,4 +32,4 @@
 
 [MITM]
 
-hostname = %APPEND% *.ubixioe.com,xsfo.mddcloud.com.cn,mob.mddcloud.com.cn,toblog.ctobsnssdk.com,t-dsp.pinduoduo.com,mobads-pre-config.cdn.bcebos.com,sdk1xyajs.data.kuiniuca.com,conf-darwin.xycdn.com,*.ubixioe.com 
+hostname = %APPEND% api-htp.beizi.biz,*.ubixioe.com,xsfo.mddcloud.com.cn,mob.mddcloud.com.cn,toblog.ctobsnssdk.com,t-dsp.pinduoduo.com,mobads-pre-config.cdn.bcebos.com,sdk1xyajs.data.kuiniuca.com,conf-darwin.xycdn.com,*.ubixioe.com 
