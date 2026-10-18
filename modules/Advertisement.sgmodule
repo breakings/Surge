@@ -20,7 +20,7 @@
 
 # 百词斩
 # 百词斩去广告
-^https?:\/\/advertise\.bczeducation\.cn\/rpc\/advertise\/(get_loading_ad_items|get_main_view_bottom_advs_v2|get_loading_ad_info|get_startup_ad|get_startup_ad_v2|get_main_view_top_banner_advs|get_practice_popup_adv|report_startup_ad_event) data-type=text data="{}" status-code=200
+^https?:\/\/(advertise\.(bczeducation\.cn|baicizhan\.com)\/rpc\/advertise\/(get_loading_ad_items|get_main_view_bottom_advs_v[23]|get_loading_ad_info|get_startup_ad(_v2)?|get_main_view_top_banner_advs|get_practice_popup_adv|report_startup_ad_event)|ad\.bczcdn\.com\/) data-type=text data="{}" status-code=200
 ^https?:\/\/ad\.bczcdn\.com\/ data-type=text data="{}" status-code=200
 ^https?:\/\/ad\.bczcdn\.com\/ data-type=text data="{}" status-code=200
 ^https?:\/\/advertise\.baicizhan\.(com|org)\/rpc\/advertise\/ data-type=text data="{}" status-code=200
