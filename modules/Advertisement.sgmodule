@@ -27,4 +27,4 @@
 
 [MITM]
 
-hostname = %APPEND% js.lgb360.com,api.towords.net,advertise.bczeducation.com,ad.bczcdn.com,advertise.baicizhan.com,advertise.baicizhan.org,cap.baicizhan.com
+hostname = %APPEND% js.lgb360.com,api.towords.net,advertise.bczeducation.cn,advertise.bczeducation.com,ad.bczcdn.com,advertise.baicizhan.com,advertise.baicizhan.org,cap.baicizhan.com
